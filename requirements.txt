@@ -1,0 +1,7 @@
+python-telegram-bot>=20.0
+requests>=2.31.0
+pikepdf>=9.0.0
+Pillow>=10.0.0
+python-dotenv>=1.0.0
+httpx>=0.25.0
+pycryptodome>=3.19.0
