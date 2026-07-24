@@ -219,13 +219,9 @@ from telegram.ext import Application, CommandHandler, MessageHandler, Conversati
 
 (NAME, MOBILE, CAP1, OTP1, CAP2, OTP2) = range(6)
 
-def load_token():
-    token = os.getenv("BOT_TOKEN")
+import os
 
-    if not token:
-        raise ValueError("BOT_TOKEN environment variable not found")
-
-    return token
+BOT_TOKEN = os.getenv("8870070946:AAFv_6DD0_7o37KDYEKtC7D9MhhE9wKY2u8")
 
 class UserSession:
     def __init__(self):
