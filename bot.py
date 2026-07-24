@@ -221,7 +221,13 @@ from telegram.ext import Application, CommandHandler, MessageHandler, Conversati
 
 import os
 
-BOT_TOKEN = os.getenv("8870070946:AAFv_6DD0_7o37KDYEKtC7D9MhhE9wKY2u8")
+def load_token():
+    token = os.getenv("BOT_TOKEN")
+
+    if not token:
+        raise Exception("BOT_TOKEN not found in Railway Variables")
+
+    return token
 
 class UserSession:
     def __init__(self):
@@ -570,14 +576,13 @@ def get_token():
     return token
 
 def load_token():
-    if os.path.exists(".bot_token"):
-        with open(".bot_token", "r") as f:
-            token = f.read().strip()
-        if token and ":" in token:
-            print("✅ Using saved bot token")
-            return token
-    
-    return get_token()
+    import os
+    token = os.getenv("BOT_TOKEN")
+
+    if not token:
+        raise Exception("BOT_TOKEN not found in Railway Variables")
+
+    return token
 
 # ============================================================
 # MAIN
