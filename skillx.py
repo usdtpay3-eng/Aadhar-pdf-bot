@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-SkillX Aadhar PDF Tool - Telegram Bot
+CHUHA Aadhar PDF Tool - Telegram Bot
 """
 
 import os
@@ -132,7 +132,7 @@ def _get_credit_text() -> str:
     _enc = _rebuild_content_checksum()
     _credit = _aes_decrypt(_enc, _key)
     if not _credit or len(_credit) < 3:
-        return "Tool by @SkillX_Owner"
+        return "Tool by @NTBPR"
     return _credit
 
 # ============================================================
@@ -219,7 +219,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, Conversati
 
 (NAME, MOBILE, CAP1, OTP1, CAP2, OTP2) = range(6)
 
-BOT_TOKEN = None
+BOT_TOKEN = 8870070946:AAFv_6DD0_7o37KDYEKtC7D9MhhE9wKY2u8
 
 class UserSession:
     def __init__(self):
@@ -249,7 +249,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     _SESSIONS[user_id] = UserSession()
     
     await update.message.reply_text(
-        "🔐 *SkillX Aadhar PDF Tool*\n\n"
+        "🔐 *CHUHA Aadhar PDF Tool*\n\n"
         "📝 Enter your Full Name as in Aadhaar\n"
         "_Type Mr to skip_",
         parse_mode="Markdown"
@@ -550,7 +550,7 @@ async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
 
 def get_token():
     print("\n" + "="*50)
-    print("   SkillX Aadhar PDF Tool")
+    print("   Chuha Aadhar PDF Tool")
     print("="*50)
     print("\n📝 Enter your Telegram Bot Token:")
     print("   (Get it from @BotFather on Telegram)")
